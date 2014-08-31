@@ -11,9 +11,9 @@
         "url": "git://github.com/ankitpatial/mongodb-promises.git"
     },
     "keywords": [
-        "aws",
-        "aws-sqs",
-        "poller"
+        "mongodb",
+        "promises",
+        "mongodb-promises"
     ],
     "bugs": {
         "url": "https://github.com/ankitpatial/mongodb-promises/issues"
