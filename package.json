@@ -1,23 +1,36 @@
 {
-  "name": "mongodb-promises",
-  "version": "0.0.1",
-  "description": "A simple promise based wrapper for mongodb",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "mongodb": "^1.4.8",
-    "q": "^1.0.1"
-  },
-  "devDependencies": {
-    "mocha": "^1.21.4",
-    "sinon": "^1.10.3",
-    "chai": "^1.9.1"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "mongodb-promises",
+    "version": "0.0.2",
+    "description": "A simple promise based wrapper for mongodb",
+    "main": "index.js",
+        "directories": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ankitpatial/mongodb-promises.git"
+    },
+    "keywords": [
+        "aws",
+        "aws-sqs",
+        "poller"
+    ],
+    "bugs": {
+        "url": "https://github.com/ankitpatial/mongodb-promises/issues"
+    },
+    "homepage": "https://github.com/ankitpatial/mongodb-promises",
+    "dependencies": {
+        "mongodb": "^1.4.8",
+        "q": "^1.0.1"
+    },
+    "devDependencies": {
+        "mocha": "^1.21.4",
+        "sinon": "^1.10.3",
+        "chai": "^1.9.1"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "author": "Ankit Patial",
+    "license": "ISC"
 }
