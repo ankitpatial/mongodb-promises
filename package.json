@@ -1,6 +1,6 @@
 {
     "name": "mongodb-promises",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "A simple promise based wrapper for mongodb",
     "main": "index.js",
         "directories": {
