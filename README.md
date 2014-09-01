@@ -25,6 +25,7 @@ todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
 ```
 
 ## List of functions for DB
-    will add it soon
+- collection(collectionName, options)
+
 ## List of functions for Collection
     will add it soon
