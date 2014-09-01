@@ -24,12 +24,12 @@ todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
 
 ```
 
-## List of functions for DB
+## List of DB methods
 - **collection(collectionName, options)** Returns a collection object to perform operations on a collection using promises.
 - **drop()** To drop database, call it carefully.
 - **createCollection(name, options)** Creates a collections on mongodb, usefull if you want collections be created before use(Mongodb can create collection if not exist on first document creation). 
 
-## List of functions for Collection
+## List of Collection methods
 - **insert(doc, options)** Insert single or array of document(s) [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#insert)
 - **remove(selector, options)** Remove dcument(s) [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#remove)
 - **rename(newName)** Rename collection [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#remove)
@@ -55,7 +55,7 @@ todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
 - **aggregate(array, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#aggregate)
 - **stats()** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#stats)
 
-## Indexes function on collection
+#### Collection Index methods
 - **indexes()** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#indexes)
 - **createIndex(fieldOrSpec, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#createIndex)
 - **ensureIndex(fieldOrSpec, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#ensureIndex)
