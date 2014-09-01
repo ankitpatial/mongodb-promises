@@ -34,7 +34,7 @@ todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
 - **remove(selector, options)** Remove dcument(s) [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#remove)
 - **rename(newName)** Rename collection [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#remove)
 - **save(doc, options)**. [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#save)
-- **update(selector, doc, options) [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#update)
+- **update(selector, doc, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#update)
 - **updateUpsert(selector, doc)** Update Or upsert document.
 - **updateMulti(selector, doc)** Update multiple records.
 - **distinct(key, query, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#distinct)
