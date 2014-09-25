@@ -1,3 +1,3 @@
-exports.db = require('./lib/db');
+exports.dbClient = require('./lib/db');
 
 exports.Collection = require('./lib/collection');

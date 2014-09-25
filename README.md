@@ -45,7 +45,7 @@ todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
 - **findAndModifyOrUpsert(query, sort, doc)**
 - **findAndRemove(query, sort, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#findAndRemove)
 - **find(query, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#find)
-- **findOne(query, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#distinct)
+- **findOne(query, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#findOne)
 - **mapReduce(map, reduce, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#mapReduce)
 - **group(keys, condition, initial, reduce, finalize, command, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#group)
 - **options()** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#options)
@@ -55,7 +55,6 @@ todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
 - **aggregate(array, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#aggregate)
 - **stats()** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#stats)
 
-#### Collection Index methods
 - **indexes()** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#indexes)
 - **createIndex(fieldOrSpec, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#createIndex)
 - **ensureIndex(fieldOrSpec, options)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#ensureIndex)

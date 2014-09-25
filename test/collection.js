@@ -12,12 +12,12 @@ function Collection (db, name) {
         throw "Collection name is missing";
     }
 
-    this.db     = db;
+    this.dbClient     = db;
     this.name   = name;
 }
 
 Collection.prototype._coll = function () {
-    return this.db.connect(function (db) {
+    return this.dbClient.connect(function (db) {
         return db.collection(this.name)
     })
 }
@@ -41,7 +41,7 @@ Collection.prototype._coll = function () {
 Collection.prototype.createIndex = function (indexHash, options) {
     debug('createIndex(%s, %s)', indexHash, options);
     var self = this;
-    return self.db.connect(function (db) {
+    return self.dbClient.connect(function (db) {
         return Q.ninvoke(db, 'createIndex', self.name, indexHash, options);
     });
 };
@@ -66,7 +66,7 @@ Collection.prototype.createIndex = function (indexHash, options) {
 Collection.prototype.ensureIndex = function (indexHash, options) {
     debug('ensureIndex(%s, %s)', indexHash, options);
     var self = this;
-    return self.db.connect(function (db) {
+    return self.dbClient.connect(function (db) {
         return Q.ninvoke(db, 'ensureIndex', self.name, indexHash, options);
     });
 };
@@ -74,7 +74,7 @@ Collection.prototype.ensureIndex = function (indexHash, options) {
 Collection.prototype.reIndex = function () {
     debug('reIndex()');
     var self = this;
-    return self.db.connect(function (db) {
+    return self.dbClient.connect(function (db) {
         return Q.ninvoke(db, 'reIndex', self.name, indexName);
     });
 };
@@ -95,7 +95,7 @@ Collection.prototype.indexInfo = function () {
 Collection.prototype.dropIndex = function (indexName) {
     debug('dropIndex(%s)', indexName);
     var self = this;
-    return self.db.connect(function (db) {
+    return self.dbClient.connect(function (db) {
         return Q.ninvoke(db, 'dropIndex', self.name, indexName);
     });
 };
