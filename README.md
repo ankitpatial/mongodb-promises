@@ -10,6 +10,30 @@ npm install mongodb-promises
 ```
 
 ## How to use it?
+
+### In a big app.
+- Create a file may be db.js and put in below code.
+```
+var config      = require('config'),
+    db          = require('mongodb-promises').db(config.db.host, config.db.name);
+module.exports = db;
+```
+- Use this db.js that will make use of single db object.
+```
+var db          = require('./db')
+    todoColl    = db.collection('todos');
+
+todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
+        .then(function (resultArr) {
+            console.log('saved successfully');
+        })
+        .catch(function (err) {
+            console.error('Error on insert ', err);
+        });
+
+```
+
+### Simple one file script
 ```
 var db          = require('mongodb-promises').db('host:port', 'db_name'), // host can be array in case of replSet
     todoColl    = db.collection('todos');
