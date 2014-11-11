@@ -18,12 +18,14 @@ var config      = require('config'),
     db          = require('mongodb-promises').db(config.db.host, config.db.name);
 module.exports = db;
 ```
+
 - Use this db.js that will make use of single db object.
+
 ```
 var db          = require('./db')
     todoColl    = db.collection('todos');
 
-todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
+todoColl.insert([{text: 'first task to do'}, {text: 'second task to do'}])
         .then(function (resultArr) {
             console.log('saved successfully');
         })
@@ -38,7 +40,7 @@ todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
 var db          = require('mongodb-promises').db('host:port', 'db_name'), // host can be array in case of replSet
     todoColl    = db.collection('todos');
 
-todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
+todoColl.insert([{text: 'first task to do '}, {text: 'second task to do'}])
         .then(function (resultArr) {
             console.log('saved successfully');
         })
@@ -51,7 +53,7 @@ todoColl.insert([{text: 'first todo'}, {text: 'second todo'}])
 ## List of DB methods
 - **collection(collectionName, options)** Returns a collection object to perform operations on a collection using promises.
 - **drop()** To drop database, call it carefully.
-- **createCollection(name, options)** Creates a collections on mongodb, usefull if you want collections be created before use(Mongodb can create collection if not exist on first document creation). 
+- **createCollection(name, options)** Creates a collections on mongodb, usefull if you want collections be created before use(Mongodb can create collection if not exist on first document creation).
 
 ## List of Collection methods
 - **insert(doc, options)** Insert single or array of document(s) [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#insert)
