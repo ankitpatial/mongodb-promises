@@ -12,14 +12,14 @@ npm install mongodb-promises
 ## How to use it?
 
 ### In a big app.
-- Create a file may be db.js and put in below code.
+- Create a file may be db.js and put below code into that.
 ```
 var config      = require('config'),
     db          = require('mongodb-promises').db(config.db.host, config.db.name);
 module.exports = db;
 ```
 
-- Use this db.js that will make use of single db object.
+- Now you can use db.js any no. of time time making sure all sharing same db object instance.
 
 ```
 var db          = require('./db')
@@ -90,3 +90,6 @@ todoColl.insert([{text: 'first task to do '}, {text: 'second task to do'}])
 - **reIndex()** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#reIndex)
 - **indexExists(indexNames)** [mongodb api](http://mongodb.github.io/node-mongodb-native/api-generated/collection.html#indexExists)
 
+### Changes Log
+#### 0.2.0
+- Mongodb package as peer dependency.
