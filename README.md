@@ -1,13 +1,7 @@
 mongodb-promises
 ================
 
-A simple promises wrapper around mongodb nodejs drivers.
-
-## Install
-To install the most recent release from npm, run:
-```
-npm install mongodb-promises
-```
+A simple promise wrapper around mongodb(peer dependency) nodejs drivers.
 
 ## How to use it?
 
